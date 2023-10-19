@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".ui.SecondActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/custom_toolbar" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/search_bg"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/search_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_search"
+                    app:tint="@color/secondary_text_color" />
+
+                <EditText
+                    android:id="@+id/search_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/search_icon"
+                    android:autofillHints="none"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/search_here"
+                    android:inputType="text"
+                    android:textColor="@color/secondary_text_color"
+                    android:textColorHint="@color/secondary_text_color"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/clear_filters_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_selected_btn"
+                        android:drawablePadding="2dp"
+                        android:paddingHorizontal="12dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingVertical="6dp"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/montserrat"
+                        android:visibility="gone"
+                        android:text="@string/clear_filters"
+                        android:textSize="11sp"
+                        app:drawableEndCompat="@drawable/ic_clear" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/show_owned_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_not_selected_btn"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginStart="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/show_owned_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/only_show_owned"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/show_owned_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="@string/no"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="11sp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/skill_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_not_selected_btn"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginStart="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/skill_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/skill"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/skill_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="@string/all"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="11sp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/curriculum_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_not_selected_btn"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginStart="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/curriculum_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/curriculum"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/curriculum_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="@string/all"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="11sp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/style_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_not_selected_btn"
+                        android:paddingHorizontal="12dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingVertical="6dp"
+                        android:layout_marginStart="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/style_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/style"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/style_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="@string/all"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="11sp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/educator_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_not_selected_btn"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_marginStart="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/educator_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/educator"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/educator_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="@string/all"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="11sp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/series_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_not_selected_btn"
+                        android:paddingHorizontal="12dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingVertical="6dp"
+                        android:layout_marginStart="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/series_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/series"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/series_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="@string/all"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="11sp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </HorizontalScrollView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/video_rec_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@color/translucent_black" />
+
+    <include layout="@layout/filter_bottom_sheet" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

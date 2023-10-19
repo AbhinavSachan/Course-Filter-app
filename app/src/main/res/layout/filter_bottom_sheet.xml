@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/filter_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_bg"
+    android:clickable="true"
+    android:focusable="true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <TextView
+        android:id="@+id/filter_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="4dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        android:text="@string/title"
+        android:textColor="@color/text_color"
+        android:textSize="16sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/filter_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/filter_title" />
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/cancel_btn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_below="@id/filter_rec_view"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:background="@drawable/round_btn"-->
+<!--        android:elevation="4dp"-->
+<!--        android:fontFamily="@font/montserrat"-->
+<!--        android:paddingHorizontal="12dp"-->
+<!--        android:paddingVertical="4dp"-->
+<!--        android:text="@string/cancel"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="12sp" />-->
+
+</RelativeLayout>

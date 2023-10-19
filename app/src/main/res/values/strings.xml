@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Task App</string>
+    <string name="title">Title</string>
+    <string name="educator">Educator</string>
+    <string name="search_here">Search Here</string>
+    <string name="collection">Collection</string>
+    <string name="view_all">View All</string>
+    <string name="filter">Filter Name</string>
+    <string name="owned">Owned</string>
+    <string name="no_data_available">No Data Available</string>
+    <string name="cancel">Cancel</string>
+    <string name="clear_filters">Clear Filters</string>
+    <string name="only_show_owned">Only Show Owned :</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="all">All</string>
+    <string name="skill">Skill</string>
+    <string name="curriculum">Curriculum</string>
+    <string name="style">Style</string>
+    <string name="series">Series</string>
+    <string name="no_cat_available">No Category Available</string>
+</resources>
